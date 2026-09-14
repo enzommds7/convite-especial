@@ -1,109 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
+    <!-- Define os caracteres especiais (acentos) -->
     <meta charset="UTF-8">
+    <!-- Garante que o site funcione bem no celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Um Convite Especial</title>
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fce4ec; /* Fundo rosa claro */
-            font-family: 'Arial', sans-serif;
-            overflow: hidden; /* Evita barras de rolagem quando o botão foge */
-        }
-
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            z-index: 10; /* Garante que o texto fique acima de tudo */
-        }
-
-        h1 {
-            color: #e91e63;
-            margin-bottom: 30px;
-        }
-
-        .botoes {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        button {
-            padding: 10px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .btn-sim {
-            background-color: #4caf50;
-            color: white;
-            text-decoration: none; 
-        }
-
-        .btn-sim:hover {
-            background-color: #45a049;
-            transform: scale(1.1);
-        }
-
-        
-        a {
-            text-decoration: none;
-        }
-
-        .btn-nao {
-            background-color: #f44336;
-            color: white;
-            position: absolute; 
-        }
-    </style>
+    <title>Convite Especial</title>
+    <!-- Conecta este arquivo HTML ao nosso arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+    <!-- Container principal para centralizar tudo -->
     <div class="container">
-        <h1>Aceita sair comigo? 💖</h1>
-        <div class="botoes">
-            <a href="https://youtu.be/eQOFRZ1wNLw?si=pIaUk8pMNKvVMpA-" target="_blank">
-                <button class="btn-sim">Sim</button>
-            </a>
-            
-            <button class="btn-nao" id="btnNao" onmouseover="fugir()">Não</button>
+        <h1>Você aceita sair comigo?</h1>
+
+        <!-- Div que vai segurar os dois botões um ao lado do outro -->
+        <div class="buttons">
+            <button id="btn-sim" class="btn">Sim!</button>
+            <button id="btn-nao" class="btn">Não</button>
         </div>
     </div>
 
-    <script>
-        function fugir() {
-            var btnNao = document.getElementById("btnNao");
-
-            
-            var larguraJanela = window.innerWidth;
-            var alturaJanela = window.innerHeight;
-
-            
-            var maxX = larguraJanela - btnNao.offsetWidth;
-            var maxY = alturaJanela - btnNao.offsetHeight;
-
-            
-            var aleatorioX = Math.floor(Math.random() * maxX);
-            var aleatorioY = Math.floor(Math.random() * maxY);
-
-            
-            btnNao.style.left = aleatorioX + "px";
-            btnNao.style.top = aleatorioY + "px";
-        }
-    </script>
-
+    <!-- Conecta este arquivo HTML ao nosso arquivo de lógica JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>

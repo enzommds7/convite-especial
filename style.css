@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    /* Fundo preto */
+    color: #ffffff;
+    /* Texto branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fonte moderna e bonita */
+
+    /* As 3 linhas abaixo servem para centralizar tudo no meio da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    /* Faz o body ocupar 100% da altura da tela */
+    overflow: hidden;
+    /* Esconde a barra de rolagem quando o botão fugir da tela */
+}
+
+/* Alinha o texto do título ao centro */
+.container {
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    /* Leve brilho atrás da letra */
+}
+
+/* Mantém os botões um ao lado do outro usando Flexbox */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Adiciona um espaço de 30px entre o Sim e o Não */
+}
+
+/* Estilo base aplicado a ambos os botões */
+.btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    /* Este é o corner-radius para os cantos arredondados */
+    cursor: pointer;
+    transition: 0.2s;
+    /* Deixa a animação de hover mais suave */
+}
+
+/* Cores e estilo específico para o botão Sim */
+#btn-sim {
+    background-color: #28a745;
+    /* Verde bonito */
+    color: white;
+}
+
+/* Efeito ao passar o mouse no botão Sim */
+#btn-sim:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+    /* Faz o botão crescer 10% */
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.6);
+    /* Brilho verde */
+}
+
+/* Cores e estilo específico para o botão Não */
+#btn-nao {
+    background-color: #dc3545;
+    /* Vermelho */
+    color: white;
+    /* transition opcional aqui faz o botão 'deslizar' quando foge */
+    transition: left 0.2s ease, top 0.2s ease;
+}
